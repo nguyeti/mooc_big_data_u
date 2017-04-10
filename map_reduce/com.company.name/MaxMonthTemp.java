@@ -1,4 +1,6 @@
 import org.apache.hadoop.conf.Configuration;
+
+
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
@@ -6,6 +8,12 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
+
+/*
+ * javac -cp `hadoop classpath` *.java (compile)
+ * jar cf MaxMT.jar *.class (create jar file)
+ * hadoop jar ./MaxMT.jar MaxMonthTemp sampledata/SumnerCountyTemp.dat sampledata/TempOut (start mrjob)
+ *  */
 
 public class MaxMonthTemp {
 	public static void main(String[] args) throws Exception {
